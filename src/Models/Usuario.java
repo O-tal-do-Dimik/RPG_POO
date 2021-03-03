@@ -2,9 +2,9 @@ package Models;
 
 public class Usuario {
 	
-	private int id;
-	private String Nome;
-	private String Senha;
+	private int 	id;
+	private String 	Nome;
+	private String 	Senha;
 	
 	public Usuario(int id, String nome, String senha) {
 		super();

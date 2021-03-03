@@ -9,12 +9,12 @@ public class Mesa {
 	private String 	Nomemesa;
 	private String  aramazenaNome[];
 	
-	public Mesa(int idmesa, int tamanho, String nomemesa, String[] aramazenaNome) {
+	public Mesa(String nomemesa,int idmesa, int tamanho ) {
 		super();
+		Nomemesa = nomemesa;
 		Idmesa = idmesa;
 		Tamanho = tamanho;
-		Nomemesa = nomemesa;
-		this.aramazenaNome = aramazenaNome;
+		
 	}
 	
 	// um dado para gerar um numero aleatorio entre 1 e 6
@@ -24,12 +24,10 @@ public class Mesa {
 		int d6 = aleatorio.nextInt(6)+1;
 		return d6;
 	}
-	
-	// mostrar o nome dos jogadores na mesa
-	
+	// mostra nome dos jogadores
 	public void Jogadores() {
 		for( int i = 0; i <= aramazenaNome.length; i++)
-	        System.out.printf( "\n", i, aramazenaNome[i]);
+	        System.out.printf( "\n",aramazenaNome[i]);
 		
 	}
 	

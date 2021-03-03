@@ -9,8 +9,10 @@ public class Ficha_Personagem {
 	private int 	poderdefogo;
 	private int 	habilidade;
 	private int		armadura;
-	private int 	Hp;	
+	private int 	Hp;
 	private int 	Mp;
+	private int 	Xp;
+	
 	public Ficha_Personagem(String nome, String classe, int forca, int resistencia, int poderdefogo, int habilidade,
 			int armadura) {
 		super();
@@ -79,6 +81,10 @@ public class Ficha_Personagem {
 
 	public void setArmadura(int armadura) {
 		this.armadura = armadura;
+	}
+	
+	public int getXp() {
+		return Xp;
 	}
 	
 	public int getHp() {
