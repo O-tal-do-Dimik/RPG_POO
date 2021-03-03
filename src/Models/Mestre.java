@@ -4,14 +4,6 @@ import java.util.Scanner;
 
 public class Mestre  {	
 
-	
-	
-
-	
-	
-	
-
-
 public void CriarNPC() {
 	Scanner input2 = new Scanner(System.in);
 	System.out.println("Digite O Nome, A Classe e os Seguintes Atributos em Sequencia Força,Resistencia,Poder de Fogo,Habilidade e Armadura");	
@@ -37,8 +29,5 @@ public void CriaMesa() {
 		System.out.println(""+m1.getTamanho());
 		System.out.println(""+m1.getIdmesa());
 }
-
-
-
 
 }
