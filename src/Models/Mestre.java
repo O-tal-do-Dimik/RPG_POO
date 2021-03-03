@@ -5,11 +5,6 @@ import java.util.Scanner;
 public class Mestre  {	
 
 	
-	
-
-	
-	
-	
 
 
 public void CriarNPC() {

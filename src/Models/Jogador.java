@@ -8,6 +8,15 @@ public class Jogador {
 	
 	
 	
+	public Boolean BuscarMesa() {
+		
+		Scanner inputJ = new Scanner(System.in);
+		System.out.println("Cacetao massivo de carne escura");
+			Mesa b1 = new Mesa(inputJ.nextLine(),)
+		
+		return null;
+	}
+	
 	public void CriarPersonagem() {
 		Scanner input2 = new Scanner(System.in);
 		System.out.println("Digite O Nome, A Classe e os Seguintes Atributos em Sequencia Força,Resistencia,Poder de Fogo,Habilidade e Armadura");	
