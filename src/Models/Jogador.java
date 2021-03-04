@@ -12,7 +12,7 @@ public class Jogador {
 		
 		Scanner inputJ = new Scanner(System.in);
 		System.out.println("Cacetao massivo de carne escura");
-			Mesa b1 = new Mesa(inputJ.nextLine(),)
+			
 		
 		return null;
 	}

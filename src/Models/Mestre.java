@@ -1,10 +1,20 @@
 package Models;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Mestre  {	
+ 
+//public Mesa m1;
+	
 
 	
+ArrayMesa m1;
+
+public Mestre() {
+	super();
+	this.m1 = new ArrayMesa();
+}
 
 
 public void CriarNPC() {
@@ -22,18 +32,71 @@ public void CriarNPC() {
 	System.out.println("Pontos de Magia:"+f1.getMp());
 }
 	
-	
+
 public void CriaMesa() {
+	Mesa mesa;	
+		Scanner input = new Scanner(System.in);
+		System.out.println("Crie nome da mesa o id da sala e diga o numero de jogadores");
 		
-	Scanner input = new Scanner(System.in);
-		System.out.println("Crie o Nome da Mesa  o Id da sala e o Numero de Jogadores");
-			Mesa m1 = new Mesa (input.nextLine(),input.nextInt(),input.nextInt());
-		System.out.println(""+m1.getNomemesa());
-		System.out.println(""+m1.getTamanho());
-		System.out.println(""+m1.getIdmesa());
+		mesa = new Mesa(input.nextLine(),input.nextInt(),input.nextInt());
+		m1.addMesa(mesa);
+		System.out.println("Sala criada!!");	
+		int n = m1.size();
+	    System.out.println(n);
 }
 
+public void MostraMesa() {
+				
 
+			
+		
+		//System.out.printf("Percorrendo o ArrayList (usando o índice)\n");
+		
+	    int n = m1.size();
+	    System.out.println(n);
+	    
+	    int i;
+	    for (i=0; i<n; i++) {
+	    	
+	    	Mesa m_aux = m1.get(i);
+			System.out.println("o Nome da sua Mesa:"+m_aux.getNomemesa());
+			System.out.println("Players na mesa:"+m_aux.getTamanho());
+			System.out.println("Id da Mesa:"+m_aux.getIdmesa());
+	
+	    }
+	}
+
+
+
+public void ApagarMesa() {
+	
+	Scanner input = new Scanner(System.in);
+	System.out.println("Digite o id da mesa que quer apagar");
+	
+    int n = m1.size();
+	
+    int i;
+    
+    for (i=0; i<n; i++) {
+    	
+    	Mesa m_aux = m1.get(i);
+		System.out.println("o id da mesa:"+m_aux.getIdmesa());
+		
+		if(m_aux.getIdmesa() == input.nextInt() ) {
+			m1.removeMesa(m_aux);
+			System.out.println("Mesa Apagada");
+		}
+		
+    }
+	
+	
+//		System.out.println("Voce esta Apagando uma Mesa!");
+//				m1.setTamanho(0);
+//				m1.setNomemesa(null);
+//				m1.setIdmesa(0);
+	
+	
+}
 
 
 }
